@@ -3,6 +3,7 @@ import 'package:flutterapp/pages/home_page.dart';
 import 'package:flutterapp/pages/my_page.dart';
 import 'package:flutterapp/pages/search_page.dart';
 import 'package:flutterapp/pages/travel_page.dart';
+import 'package:flutterapp/pages/travel_tab.dart';
 
 
 class TabNavigator extends StatefulWidget {
@@ -25,9 +26,10 @@ class _TabNavigatorState extends State<TabNavigator> {
         children: <Widget>[
           HomePage(),
           SearchPage(hideLeft: true,),
-          TravelPage(),
+          TravelTab(),
           MyPage(),
         ],
+        physics: NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
